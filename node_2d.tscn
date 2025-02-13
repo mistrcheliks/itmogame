@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci21by176g470"]
+
+[ext_resource type="Texture2D" uid="uid://dc1rg5avkn1dh" path="res://IMG_20250116_214657.jpg" id="1_pxp3i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Img20250116214657" type="Sprite2D" parent="."]
+position = Vector2(120, -2)
+texture = ExtResource("1_pxp3i")
