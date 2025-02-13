@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci21by176g470"]
+
+[ext_resource type="Texture2D" uid="uid://dc1rg5avkn1dh" path="res://текстурки/IMG_20250116_214657.jpg" id="1_36nkw"]
+
+[node name="Стартовое меню" type="Node2D"]
+position = Vector2(-16, 0)
+
+[node name="Фон" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_right = 816.0
+offset_bottom = 600.0
+texture = ExtResource("1_36nkw")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Кнопка начать игру" type="Button" parent="Фон"]
+layout_mode = 2
+offset_left = 304.0
+offset_top = 448.0
+offset_right = 496.0
+offset_bottom = 513.0
+text = "Начать игру кноппка"
+metadata/_edit_use_anchors_ = true
+
+[node name="Название игры" type="Label" parent="Фон"]
+layout_mode = 2
+offset_left = 200.0
+offset_top = 64.0
+offset_right = 600.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 56
+text = "Название игры"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_use_anchors_ = true
