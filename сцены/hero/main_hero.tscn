@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://ctm6854a3l2ev"]
+
+[ext_resource type="Texture2D" uid="uid://baq81emdhem6d" path="res://сцены/hero/lizard_f_hit_anim_f0.png" id="1_qyev2"]
+[ext_resource type="Texture2D" uid="uid://dh42hchohl7ee" path="res://сцены/hero/lizard_f_idle_anim_f0.png" id="2_6w42d"]
+[ext_resource type="Texture2D" uid="uid://wkabj11jwy5t" path="res://сцены/hero/lizard_f_idle_anim_f1.png" id="3_mc733"]
+[ext_resource type="Texture2D" uid="uid://bhyn0j8fyutq1" path="res://сцены/hero/lizard_f_idle_anim_f2.png" id="4_1agx5"]
+[ext_resource type="Texture2D" uid="uid://b4864orpfobyi" path="res://сцены/hero/lizard_f_idle_anim_f3.png" id="5_tfynq"]
+[ext_resource type="Texture2D" uid="uid://dalxswxqdhiam" path="res://сцены/hero/lizard_f_run_anim_f0.png" id="6_cbaw0"]
+[ext_resource type="Texture2D" uid="uid://dmb12r0mfjg5n" path="res://сцены/hero/lizard_f_run_anim_f1.png" id="7_lhsbh"]
+[ext_resource type="Texture2D" uid="uid://1bnuuv27j6w4" path="res://сцены/hero/lizard_f_run_anim_f2.png" id="8_h55hp"]
+[ext_resource type="Texture2D" uid="uid://nnrdlkav3of2" path="res://сцены/hero/lizard_f_run_anim_f3.png" id="9_akqol"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exftd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qyev2")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6w42d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mc733")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1agx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tfynq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cbaw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lhsbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h55hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_akqol")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3yefb"]
+radius = 6.0
+
+[node name="Main_hero" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(0.90718, 1.00473)
+sprite_frames = SubResource("SpriteFrames_exftd")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_3yefb")
+
+[node name="Camera2D" type="Camera2D" parent="."]

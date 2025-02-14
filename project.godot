@@ -11,20 +11,22 @@ config_version=5
 [application]
 
 config/name="itmo.game"
-run/main_scene="res://сцены/Стартовое_меню.tscn"
+run/main_scene="res://сцены/level/level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://текстурки/icon.svg"
 
 [display]
 
-window/size/viewport_width=800
-window/size/viewport_height=600
+window/size/viewport_width=640
+window/size/viewport_height=480
 window/size/mode=3
 window/size/resizable=false
-window/stretch/mode="canvas_items"
+window/size/window_width_override=320
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
